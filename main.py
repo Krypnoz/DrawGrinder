@@ -1,3 +1,4 @@
+import asyncio
 import pyfiglet
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound
@@ -38,6 +39,7 @@ async def on_message_edit(before, after):
                     await cmd()
             
             except:
+                await asyncio.sleep(1)
                 async for cmd in channel.slash_commands(query='draw'):
                     await cmd()
 
