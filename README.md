@@ -12,7 +12,8 @@ This bot can currently handle :
 1. Install Python 3.8 or higher.
 2. Download this repo then unzip it.
 3. Install the "rebase" branch of discord.py-self.
-4. Paste your Dicord Auth Token, Username and the Channel ID you want to grind in inside `main.py`.
+4. Install pyfiglet using pip install pyfiglet.
+5. Paste your Dicord Auth Token, Username and the Channel ID you want to grind in inside `main.py`.
 
 ## Launching 
 1. Run `main.py`.
