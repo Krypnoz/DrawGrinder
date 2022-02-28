@@ -33,8 +33,13 @@ async def on_message_edit(before, after):
         if f'Congratulations, {USERNAME}!' in author(after) and after.components == []:
             channel = client.get_channel(CHANNEL_ID)
 
-            async for cmd in channel.slash_commands(query='draw'):
-                await cmd()
+            try:
+                async for cmd in channel.slash_commands(query='draw'):
+                    await cmd()
+            
+            except:
+                async for cmd in channel.slash_commands(query='draw'):
+                    await cmd()
 
 @client.event
 async def on_command_error(ctx, error):
